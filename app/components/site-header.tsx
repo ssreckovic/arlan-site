@@ -1,3 +1,5 @@
+import { Button } from "./button";
+
 const NAV_LINKS = [
   { label: "Home", href: "#" },
   { label: "Books", href: "#" },
@@ -22,12 +24,9 @@ export function SiteHeader() {
           </a>
         ))}
       </nav>
-      <a
-        href="#newsletter"
-        className="rounded-full border border-accent-pink px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent-pink transition-colors hover:bg-accent-pink hover:text-background"
-      >
+      <Button href="#newsletter" variant="outline" size="sm">
         Newsletter
-      </a>
+      </Button>
     </header>
   );
 }

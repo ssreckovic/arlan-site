@@ -1,3 +1,5 @@
+import { Button } from "./button";
+
 export function HeroSection() {
   return (
     <section className="grid gap-10 px-6 py-16 sm:px-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:py-24">
@@ -13,18 +15,10 @@ export function HeroSection() {
           refuse to be programmed.
         </p>
         <div className="flex flex-wrap gap-4">
-          <a
-            href="#books"
-            className="rounded-full bg-accent-pink px-6 py-3 text-sm font-semibold uppercase tracking-wide text-background transition-opacity hover:opacity-90"
-          >
-            Explore Books
-          </a>
-          <a
-            href="#trailer"
-            className="rounded-full border border-foreground/30 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:border-accent-blue hover:text-accent-blue"
-          >
+          <Button href="#books">Explore Books</Button>
+          <Button href="#trailer" variant="neutral">
             ▷ Watch Trailer
-          </a>
+          </Button>
         </div>
       </div>
 
@@ -46,9 +40,7 @@ export function HeroSection() {
           placeholder="Enter your email"
           className="rounded-lg border border-foreground/20 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent-pink focus:outline-none"
         />
-        <button className="rounded-full bg-accent-pink px-6 py-3 text-sm font-semibold uppercase tracking-wide text-background transition-opacity hover:opacity-90">
-          Get My Free Story
-        </button>
+        <Button>Get My Free Story</Button>
         <p className="text-center text-xs text-muted">
           No spam. Unsubscribe anytime.
         </p>

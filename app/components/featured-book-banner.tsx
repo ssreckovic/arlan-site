@@ -7,6 +7,8 @@ type FeaturedBookBannerProps = {
   status: string;
 };
 
+import { Button } from "./button";
+
 export function FeaturedBookBanner({
   eyebrow,
   title,
@@ -34,12 +36,13 @@ export function FeaturedBookBanner({
           </div>
         </div>
       </div>
-      <a
+      <Button
         href="#notify"
-        className="shrink-0 self-start rounded-full border border-accent-pink px-6 py-3 text-sm font-semibold uppercase tracking-wide text-accent-pink transition-colors hover:bg-accent-pink hover:text-background sm:self-center"
+        variant="outline"
+        className="shrink-0 self-start sm:self-center"
       >
         Notify Me
-      </a>
+      </Button>
     </section>
   );
 }

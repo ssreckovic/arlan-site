@@ -1,4 +1,5 @@
 import { BookCard } from "./book-card";
+import booksData from "./books.json";
 
 type Book = {
   title: string;
@@ -6,28 +7,7 @@ type Book = {
   blurb: string;
 };
 
-const BOOKS: Book[] = [
-  {
-    title: "The Datasource",
-    series: "Neon Empire Book 1",
-    blurb: "In a city of surveillance, secrets are the only currency that matters.",
-  },
-  {
-    title: "Shadow Signal",
-    series: "Neon Empire Book 2",
-    blurb: "Some messages should never be received.",
-  },
-  {
-    title: "Neon Exodus",
-    series: "Neon Empire Book 3",
-    blurb: "The escape is only the beginning.",
-  },
-  {
-    title: "System Breakers",
-    series: "Standalone Novella",
-    blurb: "A rebellion is coded in blood and chrome.",
-  },
-];
+const BOOKS: Book[] = booksData;
 
 export function BookGrid() {
   return (

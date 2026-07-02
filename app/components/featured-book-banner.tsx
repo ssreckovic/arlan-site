@@ -8,6 +8,7 @@ type FeaturedBookBannerProps = {
 };
 
 import { Button } from "./button";
+import { GlowPanel } from "./glow-panel";
 
 export function FeaturedBookBanner({
   eyebrow,
@@ -18,7 +19,12 @@ export function FeaturedBookBanner({
   status,
 }: FeaturedBookBannerProps) {
   return (
-    <section className="flex flex-col gap-6 rounded-2xl border border-glow/30 bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+    <GlowPanel
+      as="section"
+      border="animated"
+      glow
+      className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+    >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <div className="aspect-[2/3] w-24 shrink-0 rounded-lg bg-gradient-to-b from-accent-blue/40 to-surface" />
         <div className="flex flex-col gap-2">
@@ -43,6 +49,6 @@ export function FeaturedBookBanner({
       >
         Notify Me
       </Button>
-    </section>
+    </GlowPanel>
   );
 }

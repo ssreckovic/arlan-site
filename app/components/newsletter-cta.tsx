@@ -1,8 +1,14 @@
 import { Button } from "./button";
+import { GlowPanel } from "./glow-panel";
 
 export function NewsletterCta() {
   return (
-    <section className="mb-16 flex flex-col gap-6 rounded-2xl border border-glow/30 bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+    <GlowPanel
+      as="section"
+      border="animated"
+      glow
+      className="mb-16 flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+    >
       <div className="flex items-center gap-4">
         <span className="text-3xl text-accent-pink" aria-hidden>
           ✉
@@ -24,6 +30,6 @@ export function NewsletterCta() {
         />
         <Button>Join The List</Button>
       </div>
-    </section>
+    </GlowPanel>
   );
 }

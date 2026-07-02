@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import { GlowPanel } from "./glow-panel";
 
 export function HeroSection() {
   return (
@@ -22,10 +23,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div
-        id="newsletter"
-        className="flex flex-col gap-4 rounded-2xl border border-glow/30 bg-surface p-6"
-      >
+      <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue">
           Free Short Story
         </p>
@@ -44,7 +42,7 @@ export function HeroSection() {
         <p className="text-center text-xs text-muted">
           No spam. Unsubscribe anytime.
         </p>
-      </div>
+      </GlowPanel>
     </section>
   );
 }

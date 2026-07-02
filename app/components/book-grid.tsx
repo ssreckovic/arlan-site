@@ -24,8 +24,12 @@ export function BookGrid() {
         </a>
       </div>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-        {BOOKS.map((book) => (
-          <BookCard key={book.title} {...book} />
+        {BOOKS.map((book, index) => (
+          <BookCard
+            key={book.title}
+            {...book}
+            animationDelay={-(index * 1.3) % 4}
+          />
         ))}
       </div>
     </section>

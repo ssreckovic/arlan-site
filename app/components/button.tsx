@@ -24,11 +24,11 @@ type ButtonAsLink = CommonProps &
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  primary: "bg-accent-pink text-background transition-opacity hover:opacity-70",
+  primary: "border border-accent-pink bg-accent-pink text-background transition-colors hover:bg-transparent hover:text-accent-pink",
   outline:
     "border border-accent-pink text-accent-pink transition-colors hover:bg-accent-pink hover:text-background",
   neutral:
-    "border border-foreground/30 text-foreground transition-colors hover:border-accent-blue hover:text-accent-blue",
+    "border border-accent-pink text-foreground transition-colors hover:border-accent-blue hover:text-accent-blue",
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -44,9 +44,9 @@ export function Button({
   disabled = false,
   ...props
 }: ButtonProps) {
-  const classes = `rounded-full font-semibold uppercase tracking-wide hover:cursor-pointer duration-300
-  aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 
-  ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`;
+  const classes = `rounded-md font-semibold uppercase tracking-wide hover:cursor-pointer duration-300
+    aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 
+    ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`;
 
   if (href) {
     return (

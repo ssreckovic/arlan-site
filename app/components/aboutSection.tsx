@@ -8,12 +8,12 @@ export default function AboutSection() {
          rounded="lg"
          background="gradient"
          glow
-         className="flex gap-4 items-center min-h-30 p-3"
+         className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-3"
       >
-         <div className="flex justify-center items-center aspect-2/3 w-80 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
+         <div className="flex justify-center items-center aspect-2/3 w-full lg:w-80 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
             Author Image
          </div>
-         <p className="max-w-1/2 text-sm text-muted">
+         <p className="lg:max-w-1/2 text-sm text-white py-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse

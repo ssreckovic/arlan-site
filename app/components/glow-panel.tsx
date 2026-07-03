@@ -14,7 +14,8 @@ type GlowPanelProps = {
   children: ReactNode;
 };
 
-const gradientRingClass: Record<Exclude<BorderVarient, "base">, string> = {
+const borderVarients: Record<BorderVarient, string> = {
+  base: "border border-glow/30",
   gradient: "gradient-border",
   animated: "gradient-border-animated"
 }
@@ -35,28 +36,18 @@ export function GlowPanel({
     background === "gradient"
       ? "bg-linear-to-b from-surface/50 to-[#1a1030]/50 backdrop-blur-md"
       : "bg-surface/50 backdrop-blur-md";
-
-  if (border === "base") {
-    return (
-      <Tag
-        id={id}
-        className={`border border-glow/30 ${backgroundClass} ${roundedClass} ${glow ? "inset-glow " : ""} ${className}`}
-      >
-        {children}
-      </Tag>
-    );
-  }
-
   const style =
     border === "animated" && animationDelay !== undefined
       ? ({ "--border-delay": `${animationDelay}s` } as CSSProperties)
       : undefined;
 
   return (
-    <Tag id={id} className={`${gradientRingClass[border]} ${roundedClass} p-[2px]`} style={style}>
-      <div className={`${backgroundClass} ${roundedClass} h-full ${glow ? "inset-glow " : ""} ${className}`}>
+    <Tag
+      id={id}
+      className={`${borderVarients[border]} ${backgroundClass} ${roundedClass} ${glow ? "inset-glow " : ""} ${className}`}
+      style={style}
+    >
         {children}
-      </div>
     </Tag>
   );
 }

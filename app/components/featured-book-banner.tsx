@@ -26,7 +26,7 @@ export function FeaturedBookBanner({
       className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="aspect-[2/3] w-24 shrink-0 rounded-lg bg-gradient-to-b from-accent-blue/40 to-surface" />
+        <div className="aspect-2/3 w-24 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface" />
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-pink">
             {eyebrow}

@@ -5,8 +5,8 @@ export default function AboutSection() {
       <GlowPanel
          as="section"
          id="about"
-         rounded="lg"
          background="gradient"
+         border="animated"
          glow
          className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-3"
       >

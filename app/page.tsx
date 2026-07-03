@@ -6,14 +6,15 @@ import { NewsletterCta } from "./components/newsletter-cta";
 import { SiteFooter } from "./components/site-footer";
 import AboutSection from "./components/aboutSection";
 import BackgroundImageWithOverlay from "./components/BackgroundImageWithOverlay";
+import { basePath } from "./lib/base-path";
 
 export default function Home() {
   return (
     <div className="relative flex min-h-full flex-1 flex-col bg-background">
-      <BackgroundImageWithOverlay image="/img/cyberpunk-city.jpg" className="mt-40"/>
+      <BackgroundImageWithOverlay image={`${basePath}/img/cyberpunk-city-2.png`} className="mt-40"/>
       <div className="relative flex flex-1 flex-col">
         <SiteHeader />
-        <main className="flex flex-1 flex-col gap-16 px-6 sm:px-10">
+        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-6 sm:px-10">
           <HeroSection />
           <FeaturedBookBanner
             eyebrow="Coming Soon"

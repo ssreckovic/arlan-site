@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
-
-const repoName = "arlan-site";
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+import { basePath } from "./app/lib/base-path";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isGithubActions ? `/${repoName}` : undefined,
-  assetPrefix: isGithubActions ? `/${repoName}/` : undefined,
+  basePath: basePath || undefined,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
 };
 
 export default nextConfig;

@@ -34,8 +34,8 @@ export function GlowPanel({
   const roundedClass = rounded === "lg" ? "rounded-lg" : "rounded-2xl";
   const backgroundClass =
     background === "gradient"
-      ? "bg-linear-to-b from-surface to-[#1a1030]"
-      : "bg-surface";
+      ? "bg-linear-to-b from-surface/50 to-[#1a1030]/50 backdrop-blur-md"
+      : "bg-surface/50 backdrop-blur-md";
   const style =
     border === "animated" && animationDelay !== undefined
       ? ({ "--border-delay": `${animationDelay}s` } as CSSProperties)
